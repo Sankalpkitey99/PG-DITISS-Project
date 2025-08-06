@@ -6,4 +6,4 @@ Designed and deployed network segmentation with the OPNsense firewall to separat
 The Prometheus and Grafana dashboards were set up to monitor system metrics and health in real time.
 For internal communication and alerting we implemented an internal Roundcube-based email server.
 
-Tools Used:Kubernetes, Jenkins, GitHub, Snort, Filebeat, Logstash, Elasticsearch, Kibana, Prometheus, Grafana, OPNsense, Apache, MariaDB, Roundcube, Kali Linux
+Tools & Technologies:Kubernetes, Docker, Jenkins, GitHub, Snort, Filebeat,Logstash,Elasticsearch,Kibana,Prometheus,Grafana,XCA,OPNsense Firewall,Apache,MariaDB,Roundcube,kali linux

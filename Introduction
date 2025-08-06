@@ -1,0 +1,9 @@
+Developed an enterprise-grade DevSecOps infrastructure with layered security, CI/CD automation, observability, and offensive security testing.
+A Kubernetes cluster with a master and worker node  set up to manage the deployment of containerized workloads, with the worker hosting an Apache web server and MariaDB database pods to simulate production services.  Jenkins and GitHub were used to construct CI/CD pipelines, while Snort was integrated for real-time intrusion detection .
+Set up centralized security logging using the ELK Stack to enable alarm correlation and visualization.
+Real-world attack scenarios were run with Kali Linux to ensure efficacy and end-to-end alert transmission.
+Designed and deployed network segmentation with the OPNsense firewall to separate Kubernetes services from internal LAN monitoring and email systems.
+The Prometheus and Grafana dashboards were set up to monitor system metrics and health in real time.
+For internal communication and alerting we implemented an internal Roundcube-based email server.
+
+Tools & Technologies:Kubernetes, Docker, Jenkins, GitHub, Snort, Filebeat,Logstash,Elasticsearch,Kibana,Prometheus,Grafana,XCA,OPNsense Firewall,Apache,MariaDB,Roundcube,kali linux

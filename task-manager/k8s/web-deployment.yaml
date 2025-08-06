@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: php-web
+  template:
+    metadata:
+      labels:
+        app: php-web
+    spec:
+      containers:
+        - name: php-apache
+          image: kiteysa999/task-manager-web:latest  # <-- Your custom Docker image
+          ports:
+            - containerPort: 80
+          env:
+            - name: DB_HOST
+              value: mariadb-service
+            - name: DB_NAME
+              value: task_manager
+            - name: DB_USER
+              value: admin
+            - name: DB_PASSWORD
+              value: toor
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: php-web-service
+spec:
+  type: NodePort
+  selector:
+    app: php-web
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30080

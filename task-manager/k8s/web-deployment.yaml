@@ -1,9 +1,10 @@
+# Deployment file for web-server
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: php-web
 spec:
-  replicas: 1
+  replicas: 1  # for now to manage 1 replicaset
   selector:
     matchLabels:
       app: php-web
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
         - name: php-apache
-          image: kiteysa999/task-manager-web:latest  # <-- Your custom Docker image
+          image: kiteysa999/task-manager-web:latest  
           ports:
             - containerPort: 80
           env:

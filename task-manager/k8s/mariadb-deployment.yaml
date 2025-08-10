@@ -32,7 +32,7 @@ spec:
       volumes:
         - name: mysql-data
           hostPath:
-            path: /mnt/data/mysql  # Change this to your node directory for persistence
+            path: /mnt/data/mysql  # directory  path for mysql
 ---
 apiVersion: v1
 kind: Service
@@ -44,4 +44,4 @@ spec:
   ports:
     - port: 3306
       targetPort: 3306
-  clusterIP: None  # Headless Service for direct Pod-to-Pod communication
+  clusterIP: None  #  for now none
